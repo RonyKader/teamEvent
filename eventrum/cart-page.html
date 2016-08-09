@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from demos.codexcoder.com/eventrum/cart-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Aug 2016 10:18:49 GMT -->
+<head>
+	<meta charset="UTF-8">
+	<title>Eventrum Template</title>
+
+	<!-- Meta --> 
+    <meta name="description" content="Eventrum Template is a Creative Multipurpose HTML5 Event Template">
+    <meta name="keywords" content="Event, HTML5, Multipurpose, Template">
+    <meta name="author" content="CodexCoder">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico" />
+
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Framework Styles -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
+
+    <!-- Fonts Styles -->
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css"/> 
+
+    <!-- Plugins Styles --> 
+    <link rel="stylesheet" href="assets/css/jquery.fs.boxer.min.css">
+    <link rel="stylesheet" href="assets/css/flexslider.css">
+    <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/hover-min.css">
+    <!-- Project Styles -->
+    <link rel="stylesheet" href="assets/css/style.css"> 
+    <link rel="stylesheet" href="assets/css/responsive.css"> 
+</head>
+<body>
+    <!--  preloader  -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+                <div class="object"></div>
+            </div>
+        </div>
+    </div>
+    
+	<!-- start header  -->
+    <header id="header">
+        <nav id="primary-menu" class="primary-menu">
+            <div class="primary-menu-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="menu-area">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand logo" href="index.html"><img src="assets/images/logo.png" alt="Logo"></a>
+                                <a class="navbar-brand scroll-logo" href="index.html"><img src="assets/images/main-logo.png" alt="Logo"></a>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-376">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
+                                        <ul class="dropdown-menu sub-menu menu-sub-content">
+                                            <li><a href="index.html">Homepage One</a></li>
+                                            <li><a href="homepage2.html">Homepage Two</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li class="dropdown menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-376">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                        <ul class="dropdown-menu sub-menu menu-sub-content">
+                                            <li><a href="pricing-table.html">Pricing Table</a></li>
+                                            <li><a href="event-schedule.html">Event Schedule</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="error.html">404 page</a></li>
+                                            <li><a href="faq.html">FAQ</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="sponsor.html">Sponsors</a></li>
+                                    <li class="dropdown menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-376 active">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
+                                        <ul class="dropdown-menu sub-menu menu-sub-content">
+                                            <li><a href="shop-page.html">Shop Page</a></li>
+                                            <li><a href="product-detail.html">Product Details</a></li>
+                                            <li class="active-child-menu"><a href="cart-page.html">Cart Page</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdwon menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-376">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                                        <ul class="dropdown-menu sub-menu menu-sub-content">
+                                            <li><a href="blog.html">Blog Page</a></li>
+                                            <li><a href="blog-single.html">Blog Single</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="speaker.html">Speaker</a></li>
+                                </ul>
+                                <div class="menu-shopping-cart">
+                                    <div class="cart-icon">
+                                        <span><i class="fa fa-shopping-cart"></i>
+                                            <span class="item-counter">04</span>
+                                        </span>
+                                        <div class="menu-cart-content">
+                                            <div class="menu-cart-item">
+                                                <div class="menu-cart-img">
+                                                    <a href="#"><img src="assets/images/menu-cart-img1.jpg" alt="cart-img"></a>
+                                                </div>
+                                                <div class="menu-cart-desc">
+                                                    <a href="#">Eventrum skractch</a>
+                                                    <p>1x <span>$345.00</span></p>
+                                                </div>
+                                                <div class="menu-cart-btn">
+                                                    <a href="#"><i class="fa fa-pencil"></i></a>
+                                                    <a href="#"><i class="fa fa-times"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="menu-cart-item">
+                                                <div class="menu-cart-img">
+                                                    <a href="#"><img src="assets/images/menu-cart-img1.jpg" alt="cart-img"></a>
+                                                </div>
+                                                <div class="menu-cart-desc">
+                                                    <a href="#">Eventrum skractch</a>
+                                                    <p>1x <span>$345.00</span></p>
+                                                </div>
+                                                <div class="menu-cart-btn">
+                                                    <a href="#"><i class="fa fa-pencil"></i></a>
+                                                    <a href="#"><i class="fa fa-times"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="menu-cart-bottom">
+                                                <div class="sub-total">
+                                                    <p>Subtotal: <span>$546.00</span></p>
+                                                </div>
+                                                <div class="menu-cart-action">
+                                                    <button class="menu-cart-btn-action">CheckOut</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- /.navbar-collapse -->
+                        </div><!-- /.menu-area -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </div>
+        </nav>
+    </header>
+    <!-- end header  -->
+	
+	<!--  page header section start  -->
+	<section class="page-header-content">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="page-header-content-inner">
+	                <h3 class="page-title">Product Detail</h3>
+	                <ul class="breadcrumb">
+	                    <li><a href="#">Home</a></li>
+	                    <li class="active">Product Detail</li>
+	                </ul>
+	            </div>
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</section>
+	<!--  page header section End  -->
+
+
+	<!-- start main-content  -->
+    <div id="content" class="product-cart">
+        <div class="container">
+            <div class="row">
+                <form action="#">
+                    <div class="table-responsive">
+                        <table class="shop-cart">
+                            <thead>
+                                <tr>
+                                    <th class="cart-item">Item</th>
+                                    <th class="cart-price">Price</th>
+                                    <th class="cart-quality">Quality</th>
+                                    <th class="cart-total">Total</th>
+                                    <th class="cart-product-remove">&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="product-item">
+                                    <td class="cart-item">
+                                        <div class="item-image">
+                                            <a href="#"><img src="assets/images/cart/01.jpg" alt="image"></a>
+                                        </div><!-- /.item-image -->
+                                        <div class="content">
+                                            <h3 class="product-name">Allen Keys Imperial/ Metric</h3>
+                                        </div>
+                                    </td>
+
+                                    <td class="cart-price">
+                                        <span>$75.00</span>
+                                    </td>
+
+                                    <td class="cart-quality">
+                                        <div class="p-item-counter">
+                                            <p>
+                                                <span class="counter-sign"><i class="fa fa-minus"></i></span>
+                                                <select name="selection" class="selection">
+                                                    <option value="01">01</option>
+                                                    <option value="02">02</option>
+                                                    <option value="03">03</option>
+                                                    <option value="04">04</option>
+                                                    <option value="05">05</option>
+                                                    <option value="06">06</option>
+                                                    <option value="07">07</option>
+                                                    <option value="08">08</option>
+                                                    <option value="09">09</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
+                                                 <span class="counter-sign"><i class="fa fa-plus"></i></span>
+                                            </p>
+                                        </div><!-- /.p-item-counter --> 
+                                    </td>
+
+                                    <td class="cart-total">
+                                        <span>$120.00</span>
+                                    </td>
+
+                                    <td class="cart-product-remove">
+                                        <a href="#" title="Remove this Item">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr class="product-item">
+                                    <td class="cart-item">
+                                        <div class="item-image">
+                                            <a href="#"><img src="assets/images/cart/02.jpg" alt="image"></a>
+                                        </div><!-- /.item-image -->
+                                        <div class="content">
+                                            <h3 class="product-name">Allen Keys Imperial/ Metric</h3>
+                                        </div>
+                                    </td>
+
+                                    <td class="cart-price">
+                                        <span>$175.00</span>
+                                    </td>
+
+                                    <td class="cart-quality">
+                                        <div class="p-item-counter">
+                                            <p>
+                                                <span class="counter-sign"><i class="fa fa-minus"></i></span>
+                                                <select name="selection" class="selection">
+                                                    <option value="01">01</option>
+                                                    <option value="02">02</option>
+                                                    <option value="03">03</option>
+                                                    <option value="04">04</option>
+                                                    <option value="05">05</option>
+                                                    <option value="06">06</option>
+                                                    <option value="07">07</option>
+                                                    <option value="08">08</option>
+                                                    <option value="09">09</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
+                                                 <span class="counter-sign"><i class="fa fa-plus"></i></span>
+                                            </p>
+                                        </div><!-- /.p-item-counter --> 
+                                    </td>
+
+                                    <td class="cart-total">
+                                        <span>$250.00</span>
+                                    </td>
+
+                                    <td class="cart-product-remove">
+                                        <a href="#" title="Remove this Item">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr class="product-item">
+                                    <td class="cart-item">
+                                        <div class="item-image">
+                                            <a href="#"><img src="assets/images/cart/03.jpg" alt="image"></a>
+                                        </div><!-- /.item-image -->
+                                        <div class="content">
+                                            <h3 class="product-name">Allen Keys Imperial/ Metric</h3>
+                                        </div>
+                                    </td>
+
+                                    <td class="cart-price">
+                                        <span>$175.00</span>
+                                    </td>
+
+                                    <td class="cart-quality">
+                                        <div class="p-item-counter">
+                                            <p>
+                                                <span class="counter-sign"><i class="fa fa-minus"></i></span>
+                                                <select name="selection" class="selection">
+                                                    <option value="01">01</option>
+                                                    <option value="02">02</option>
+                                                    <option value="03">03</option>
+                                                    <option value="04">04</option>
+                                                    <option value="05">05</option>
+                                                    <option value="06">06</option>
+                                                    <option value="07">07</option>
+                                                    <option value="08">08</option>
+                                                    <option value="09">09</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                </select>
+                                                 <span class="counter-sign"><i class="fa fa-plus"></i></span>
+                                            </p>
+                                        </div><!-- /.p-item-counter --> 
+                                    </td>
+
+                                    <td class="cart-total">
+                                        <span>$250.00</span>
+                                    </td>
+
+                                    <td class="cart-product-remove">
+                                        <a href="#" title="Remove this Item">
+                                            <i class="fa fa-times"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr class="coupon-checkout">
+                                    <td colspan="5">
+                                        <div class="checkout-area">
+                                            <div class="discount-code">
+                                                <input type="text" placeholder="Enter Discount Code">
+                                                <a href="#" class="custom-btn hvr-bounce-to-bottom">Apply</a>
+                                            </div>
+
+                                            <div class="checkout">
+                                                <a href="#" class="custom-btn update-cart hvr-bounce-to-bottom">Update Cart</a>
+                                                <a href="#" class="custom-btn hvr-bounce-to-bottom">Proccess To Check Out</a>
+                                            </div>
+                                        </div><!-- /.checkout-area -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- /.table-responsive -->
+                </form>
+
+                <div class="cart-second-section">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                            <div class="calculate-shipping">
+                                <h3>Calculate Shipping</h3>
+
+                                <select name="country" id="country">
+                                    <option value="usa">USA</option>
+                                    <option value="uk">UK</option>
+                                    <option value="bangladesh">BANGLADESH</option>
+                                    <option value="india">INDIA</option>
+                                    <option value="barma">BARMA</option>
+                                    <option value="nepal">NEPAL</option>
+                                    <option value="pakistan">PAKISTAN</option>
+                                    <option value="australia">AUSTRALIA</option>
+                                    <option value="africa">AFRICA</option>
+                                </select>
+
+                                <select name="state" id="state">
+                                    <option value="country/state">Country/State</option>
+                                    <option value="dhaka">Dhaka</option>
+                                    <option value="khulna">Khulna</option>
+                                    <option value="rajshahi">Rajshahi</option>
+                                    <option value="sylet">Sylet</option>
+                                    <option value="barishal">Barishal</option>
+                                    <option value="comilla">Comilla</option>
+                                    <option value="chittagong">Chittagong</option>
+                                    <option value="jessore">Jessore</option>
+                                    <option value="rangpur">Rangpur</option>
+                                </select>
+
+                                <select name="postcode" id="postcode">
+                                    <option value="postcode">Postalcode/Zip</option>
+                                    <option value="dhaka">0057</option>
+                                    <option value="khulna">3452</option>
+                                    <option value="rajshahi">3425</option>
+                                    <option value="sylet">7865</option>
+                                    <option value="barishal">3456</option>
+                                    <option value="comilla">7689</option>
+                                    <option value="chittagong">2342</option>
+                                    <option value="jessore">5465</option>
+                                    <option value="rangpur">3423</option>
+                                </select>
+
+                                <a href="#" class="pull-right update-cart custom-btn hvr-bounce-to-bottom">Update Cart</a>
+                            </div><!-- /.calculate-shipping -->
+                        </div><!-- /.col-sm-6 col-md-6 -->
+
+                        <div class="col-sm-6 col-md-6">
+                            <div class="cart-total-2">
+                                <h3>Cart Total</h3>
+                                <ul>
+                                    <li>
+                                        <span class="pull-left">Cart Total:</span><span class="pull-right">$439.00</span>
+                                    </li>
+                                    <li>
+                                        <span class="pull-left">Shipping:</span><span class="pull-right">Free Shipping</span>
+                                    </li>
+                                    <li>
+                                        <span class="pull-left">Order Total:</span><span class="pull-right">$439.00</span>
+                                    </li>
+                                </ul>
+                            </div><!-- /.cart-total -->
+                        </div><!-- /.col-sm-6 col-md-6 -->
+                    </div>
+                </div><!-- /.cart-second-section -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div><!-- #content  -->
+	<!--  end main content section  -->
+
+
+	<!--  footer start   -->
+	<footer id="footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="row">
+							<div class="f-widget">
+								<a href="index.html" class="footer-logo"><img src="assets/images/footer-logo.png" alt="Logo"></a>
+								<div class="excerpt">
+									Professionally engineer competitive paradigms rather ethical strategic theme areas. Completely cultivate technically sound initiatives via  sound niche markets. Holisticly matrix opportunities without resource sucking best practices. 
+								</div>
+								<ul class="social-media">
+										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+										<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+										<li><a href="#"><i class="fa fa-camera"></i></a></li>
+									</ul>
+							</div><!-- /.f-widget -->
+						</div><!-- /.row -->
+					</div><!-- /.col-md-4 -->
+
+					<div class="col-md-4">
+							<div class="f-widget">
+								<h3 class="widget-title">Popular Post</h3>
+								<ul class="small-post-list">
+									<li class="small-post-item">
+										<a href="#" class="post-thumb">
+											<img src="assets/images/homepage1/footer/thumb/01.jpg" alt="thumb">
+										</a>
+										<span class="content">
+											<a href="#" class="title">Monotonectally develop seamless e-business.</a>
+											<span class="meta-post">
+												<span class="date"><i class="fa fa-calendar"></i>Jan 03, 2016</span>
+												<a href="#" class="comment"><i class="fa fa-comment"></i>09 Comment</a>
+											</span>
+										</span>
+									</li>
+
+									<li class="small-post-item">
+										<a href="#" class="post-thumb">
+											<img src="assets/images/homepage1/footer/thumb/02.jpg" alt="thumb">
+										</a>
+										<span class="content">
+											<a href="#" class="title">Monotonectally develop seamless e-business.</a>
+											<span class="meta-post">
+												<span class="date"><i class="fa fa-calendar"></i>Jan 03, 2016</span>
+												<a href="#" class="comment"><i class="fa fa-comment"></i>09 Comment</a>
+											</span>
+										</span>
+									</li>
+
+									<li class="small-post-item">
+										<a href="#" class="post-thumb">
+											<img src="assets/images/homepage1/footer/thumb/03.jpg" alt="thumb">
+										</a>
+										<span class="content">
+											<a href="#" class="title">Monotonectally develop seamless e-business.</a>
+											<span class="meta-post">
+												<span class="date"><i class="fa fa-calendar"></i>Jan 03, 2016</span>
+												<a href="#" class="comment"><i class="fa fa-comment"></i>09 Comment</a>
+											</span>
+										</span>
+									</li>
+								</ul>
+							</div><!-- /.f-widget -->
+					</div><!-- /.col-md-4 -->
+
+					<div class="col-md-4">
+						<div class="row">
+							<div class="f-widget">
+								<h3 class="widget-title">Tags</h3>
+								<ul class="tag">
+									<li><a href="#">Design</a></li>
+									<li><a href="#">HTML5</a></li>
+									<li><a href="#">CSS3</a></li>
+									<li><a href="#">Web Design</a></li>
+									<li><a href="#">WordPress</a></li>
+									<li><a href="#">Photoshop</a></li>
+									<li><a href="#">Illustrator</a></li>
+									<li><a href="#">UI/UX</a></li>
+									<li><a href="#">Photography</a></li>
+									<li><a href="#">CSS3</a></li>
+									<li><a href="#">HTML5</a></li>
+									<li><a href="#">Design</a></li>
+									<li><a href="#">Photography</a></li>
+								</ul>
+							</div><!-- /.f-widget -->
+						</div><!-- /.row -->
+					</div><!-- /.col-md-4 -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div><!-- /.footer-top -->
+		<div class="footer-bottom">
+			<p>Copyright &copy; 2016. Design and Development by <a href="#">CodexCoder</a></p>
+		</div>
+	</footer>
+	<!--  footer end   -->
+	
+	<script type='text/javascript' src='assets/js/plugins.js'></script>
+	<script type='text/javascript' src='assets/js/functions.js'></script>
+	
+</body>
+
+<!-- Mirrored from demos.codexcoder.com/eventrum/cart-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 03 Aug 2016 10:18:50 GMT -->
+</html>
