@@ -29,4 +29,6 @@ class Home extends CI_Controller {
 		$data['buytickets'] = 'buytickets';
 		$this->load->view( 'layouts/main', $data );
 	}
+
+
 }

@@ -12,4 +12,12 @@
     <?php $this->load->view( $buytickets ); ?>
 <?php endif ?>
 
+<?php if ( isset( $myaccount )): ?>
+    <?php $this->load->view( $myaccount ); ?>
+<?php endif ?>
+
+<?php if ( isset( $modifyaddress )): ?>
+    <?php $this->load->view( $modifyaddress ); ?>
+<?php endif ?>
+
 <?php $this->load->view( 'layouts/footer' ); ?>

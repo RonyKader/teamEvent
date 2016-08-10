@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 09, 2016 at 03:38 PM
+-- Generation Time: Aug 10, 2016 at 03:58 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -19,6 +19,32 @@ SET time_zone = "+00:00";
 --
 -- Database: `bollychicks`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id` int(11) NOT NULL,
+  `name` varchar(55) NOT NULL,
+  `username` varchar(22) NOT NULL,
+  `email` varchar(32) NOT NULL,
+  `password` varchar(32) NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT '1',
+  `created_date` datetime NOT NULL,
+  `created_by` int(11) NOT NULL,
+  `updated_date` datetime NOT NULL,
+  `updated_by` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `name`, `username`, `email`, `password`, `status`, `created_date`, `created_by`, `updated_date`, `updated_by`) VALUES
+(1, 'Testing', 'test', 'test@gmail.com', '123456', 2, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -54,6 +80,12 @@ INSERT INTO `users` (`id`, `fname`, `lname`, `mobile`, `email`, `postcode`, `dat
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -63,6 +95,11 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `users`
 --

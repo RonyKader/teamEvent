@@ -151,21 +151,47 @@
 					                              </div>
 
 					                              <div id="loginpage" class="tab-pane fade">
-					                                <form action="#" class="form-group">
+					                              <?php 
+					                                  $data = array(
+					                                      'id' => 'login',
+					                                      'class' => 'form-group',
+					                                      'onsubmit' =>'return loginValidation()'
+					                                      );
+					                                  echo form_open( 'auth/check_login', $data );
+					                               ?> 
+					                              
+				                                    <div class="form-group">
+				                                      <label>Email address</label>
+				                                        <?php 
+				                                            $data = array(
+				                                                'type' => 'text',
+				                                                'name' => 'email',
+				                                                'id' => 'loginemail',                                           
+				                                                'class' => 'form-control',
+				                                                'placeholder' => 'E-mail address'
+				                                                );
+				                                            echo form_input( $data );
+				                                         ?>
+				                                    </div>
+
+				                                    <div class="form-group">
+				                                      <label>Password</label>
+				                                      <?php 
+				                                          $data = array(
+				                                              'type' => 'password',
+				                                              'name' => 'password',
+				                                              'id' => 'loginpassword',                                           
+				                                              'class' => 'form-control',
+				                                              'placeholder' => 'Password'
+				                                              );
+				                                          echo form_password( $data );
+				                                       ?>
+				                                    </div>
+
 					                                    <div class="form-group">
-					                                      <label>Email address</label>
-					                                        <input type="text" class="form-control" name="email" id="a" placeholder="Email">
-					                                    </div>
-					                                    <div class="form-group">
-					                                      <label>Password</label>
-					                                        <input type="password" class="form-control" name="password" id="f" placeholder="Password">
-					                                    </div>
-					                                    <div class="form-group">
-					                                      <!--   <input type="submit" class="btn btn-primary btn-block custom-checkout login-position" value="Log in with">
-					                                        <img src="img/chefonline-04.png" alt=""> -->
 					                                        <button type="sumbit" class="btn btn-primary btn-block custom-checkout">Log in with bollychicks</button>
 					                                    </div>
-					                                </form>
+					                                <?php echo form_close(); ?>
 					                              </div>
 					                            </div>
 
@@ -188,30 +214,31 @@
 	<!-- end national-conference section  -->
 
 
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header error-modal">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Please see the error message</h4>
-      </div>
-      <div class="modal-body">
-        <p id="message"></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header error-modal">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Please see the error message</h4>
+	      </div>
+	      <div class="modal-body">
+	        <p id="message"></p>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
 
-  </div>
-</div>
+	  </div>
+	</div>
 
 <script>
 
-	function signupValidation(){
+	function signupValidation()
+	{
 		var fname = document.getElementById('fname').value;
 		fname = fname.replace(/[^A-Za-z']/gi, '');
 		document.getElementById('fname').value = fname;
@@ -300,8 +327,36 @@
 		// 	return false;
 		// }else{
 			else
-				{
-					return true;
-		}
+			{
+				return true;
+			}
 	}
+
+
+	function loginValidation(){
+		var loginEmail = document.getElementById('loginemail').value;
+		 var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+		var loginPassword = document.getElementById('loginpassword').value;
+
+		if( loginEmail == '' )
+		{
+			$('#message').html('Please provide email address.');
+			$('#myModal').modal('show');
+			return false;
+		}else if( !re.test(loginEmail) ){
+		 	$('#message').html('Invalid email address.');
+		 	$('#myModal').modal('show');
+		 	return false;
+		}else if( loginPassword == '' ){
+		 	$('#message').html('Please provide password.');
+		 	$('#myModal').modal('show');
+		 	return false;
+		}else{
+			return true;
+		}
+
+	}
+
+
 </script>

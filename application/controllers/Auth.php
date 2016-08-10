@@ -72,4 +72,57 @@ class Auth extends CI_Controller
 		}
 	}
 
+	public function check_login()
+	{ 
+
+		$this->form_validation->set_rules( 'email', 'Email', 'trim|required');
+		$this->form_validation->set_rules( 'password', 'Password', 'trim|required');
+
+		if ($this->form_validation->run() == FALSE) {
+			redirect( 'auth?Please Try with valid access' );
+		} else 
+		{
+			$this->load->model( 'auth_model' );
+			$result = $this->auth_model->check_login();
+
+			if ( $result ) 
+			{
+				redirect( 'auth/myaccount' );
+			}else
+			{
+				$this->session->set_flashdata( 'errorinfo', 'Please Try with valid email and password' );
+				redirect(base_url());
+			}
+		}
+	}
+
+
+	public function logout()
+	{		
+		$this->session->unset_userdata('logininfo');
+		$this->session->sess_destroy();
+		redirect( base_url() );		
+	}
+	
+
+	public function myaccount()
+	{
+		$data['myaccount'] = 'myaccount_page.php';
+		$this->load->view( 'layouts/main', $data );
+	}
+
+	public function modifyaddress()
+	{
+		$data['modifyaddress'] = 'modifyaddress_page.php';
+		$this->load->view( 'layouts/main', $data );
+	}
+
+
+
+
+	public function check_session()
+	{
+		print_r( $_SESSION );
+	}
+
 }

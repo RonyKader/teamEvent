@@ -64,7 +64,7 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand logo" href="index.html"><img src="<?php echo base_url();?>/assets/images/logo.png" alt="Logo"></a>
+                                <a class="navbar-brand logo" href="<?php echo base_url();?>"><img src="<?php echo base_url();?>/assets/images/logo.png" alt="Logo"></a>
                                 <a class="navbar-brand scroll-logo" href="index.html"><img src="<?php echo base_url();?>/assets/images/main-logo.png" alt="Logo"></a>
                             </div>
 
@@ -79,38 +79,52 @@
                                         </ul> -->
                                     </li>
                                     <li class="active"><a href="<?php echo base_url();?>home/buytickets">Buy Tickets</a></li>
-                                    <li class="dropdown menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-376">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-                                        <ul class="dropdown-menu sub-menu menu-sub-content">
+                                    <li class="dropdown menu-item menu-item-type-taxonomy menu-item-object-category aaamenu-item-has-children menu-item-376">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
+                                        <!-- <ul class="dropdown-menu sub-menu menu-sub-content">
                                             <li><a href="pricing-table.html">Pricing Table</a></li>
                                             <li><a href="event-schedule.html">Event Schedule</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                             <li><a href="error.html">404 page</a></li>
                                             <li><a href="faq.html">FAQ</a></li>
-                                        </ul>
+                                        </ul> -->
                                     </li>
                                     <li><a href="sponsor.html">Sponsors</a></li>
-                                    <li class="dropdown menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-376">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Shop</a>
-                                        <ul class="dropdown-menu sub-menu menu-sub-content">
-                                            <li><a href="shop-page.html">Shop Page</a></li>
+                                    <li class="dropdown menu-item menu-item-type-taxonomy menu-item-object-category aaaaamenu-item-has-children menu-item-376">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                                        <!-- <ul class="dropdown-menu sub-menu menu-sub-content">
+                                            <li><a href="shop-page.html">Blog</a></li>
                                             <li><a href="product-detail.html">Product Details</a></li>
                                             <li><a href="cart-page.html">Cart Page</a></li>
-                                        </ul>
+                                        </ul> -->
                                     </li>
-                                    <li class="dropdwon menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-376">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-                                        <ul class="dropdown-menu sub-menu menu-sub-content">
+                                    <li class="dropdwon menu-item menu-item-type-taxonomy menu-item-object-category aamenu-item-has-children menu-item-376">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact Us</a>
+                                        <!-- <ul class="dropdown-menu sub-menu menu-sub-content">
                                             <li><a href="blog.html">Blog Page</a></li>
                                             <li><a href="blog-single.html">Blog Single</a></li>
-                                        </ul>
+                                        </ul> -->
                                     </li>
-                                    <li><a href="<?php echo base_url();?>auth/registration">Login/Registration</a></li>
+                                    <?php 
+                                    $access = $this->session->userdata( 'logininfo' );
+                                    $access['email'];
+                                    if ( isset( $access )) { ?>
+                                    <li><a href="<?php echo base_url();?>auth/myaccount">My Account</a></li>
+                                    <li><a href="<?php echo base_url();?>auth/logout">Logout</a></li>
+                                     <?php }
+                                    else
+                                        {
+                                         ?>
+                                        <li><a href="<?php echo base_url();?>auth/registration">Login/Registration</a></li>
+                                         <?php 
+                                        }
+
+                                     ?>
                                 </ul>
                                 <div class="menu-shopping-cart">
                                     <div class="cart-icon">
-                                        <span><i class="fa fa-shopping-cart"></i>
-                                            <span class="item-counter">04</span>
+                                        <!-- <span><i class="fa fa-shopping-cart"></i> -->
+                                            <!-- <span class="item-counter">04</span> -->
                                         </span>
                                         <div class="menu-cart-content">
                                             <div class="menu-cart-item">

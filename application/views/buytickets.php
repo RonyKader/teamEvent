@@ -233,13 +233,7 @@
 					                                        <button type="sumbit" name="submit" class="btn btn-primary btn-block custom-checkout">Booking your chair</button>
 					                                    </div>
 					                                </form>
-					                                <style>
-					                                	.book-wrapper {
-					                                	    border: 1px solid #ccc;
-					                                	    padding: 12px;
-					                                	    margin-bottom: 18px;
-					                                	}
-					                                </style>
+					                                
 					                                <script type="text/javascript">
 
 					                                function onlyNumbers(e)
