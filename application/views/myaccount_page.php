@@ -7,6 +7,16 @@
                 <div class="contact-details myaccount-contact">
                     <h2>Account access</h2>
                     <div class="account-table">
+                    <?php 
+                        if ( $user_data ) 
+                        {
+                          foreach ($user_data as $userdata ) 
+                          {
+                              
+                          }
+                        }
+
+                     ?>
                         <table class="table table-striped">
                             <tbody> 
                                 <tr> 
@@ -14,7 +24,7 @@
                                          Login Info
                                     </td>
                                     <td class="nameshow-td">
-                                        alexjhon@chefonline.co.uk
+                                        <?php echo $userdata->email; ?>
                                     </td>
                                 </tr>
 
@@ -39,15 +49,21 @@
 
                 <div class="contact-details myaccount-contact">
                     <h2>My Details <a href="<?php echo base_url();?>auth/modifyaddress">Modify address</a></h2>
-
+                    <?php 
+                     $sucess = $this->session->flashdata( 'success' );
+                     if ( isset( $sucess )) 
+                     {
+                       echo "<p class='text-center'>".$sucess."</p>";
+                     }
+                    ?>
                     <div class="row">
                         <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
                             <div class="address-form">                            
 
                                 <div class="form-group">
-                                    <p>Jhon Alex</p>
-                                    <p>07211133365</p>
-                                    <p>alexjhon@chefonline.co.uk </p>
+                                    <p><?php echo $userdata->fname ." ". $userdata->lname; ?></p>
+                                    <p><?php echo $userdata->mobile; ?></p>
+                                    <p><?php echo $userdata->email; ?></p>
                                     <p>Flat 2, Kinross House Bemerton Estate</p>
                                     <p>London N1 0AA</p>
                                 </div>

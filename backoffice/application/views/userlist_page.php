@@ -42,7 +42,8 @@
                                 <td class="center hidden-phone"><?php echo $alluser->email;?></td>
                                 <td class="center hidden-phone"><?php echo $alluser->postcode;?></td>
                                 <td>Active</td>
-                                <td><a href="#"> Edit</a> | <a href="#">Delete</a></td>
+                                <td><a href="<?php echo base_url();?>admin_auth/edituser_box/<?php echo $alluser->id;?>"> Edit</a> 
+                                | <a href="<?php echo base_url();?>admin_auth/delete_user/<?php echo $alluser->id;?>" onclick="return confirm('Are you sure want to delete ?')";>Delete</a></td>
                             </tr>
                             <?php    
                             }

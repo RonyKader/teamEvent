@@ -5,6 +5,13 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 					            <div class="login-details">
+					              <?php 
+					              	$Reg_msg = $this->session->flashdata( 'success' );
+					              	if ( isset( $Reg_msg )) 
+					              	{
+					              		echo $Reg_msg;
+					              	}
+					               ?>
 					                <h2>Buy your tickets</h2>
 					                <!-- Modal -->
 					                <div class="">

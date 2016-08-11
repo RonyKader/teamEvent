@@ -13,6 +13,10 @@ if ( isset( $access ))
 		<?php $this->load->view( $userlist); ?>
 	<?php endif ?>
 
+	<?php if ( isset( $edituser_page ) ): ?>
+		<?php $this->load->view( $edituser_page ); ?>
+	<?php endif ?>
+
 	<?php $this->load->view( 'layouts/footer' );?>	
 
 

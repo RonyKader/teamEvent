@@ -64,6 +64,7 @@ class Auth extends CI_Controller
 
 			if ( $result ) 
 			{
+				$this->session->set_flashdata( 'success', 'Thank you for registration now you can booking table' );
 				redirect( 'home/buytickets' );
 			}else
 			{
@@ -107,17 +108,55 @@ class Auth extends CI_Controller
 
 	public function myaccount()
 	{
-		$data['myaccount'] = 'myaccount_page.php';
-		$this->load->view( 'layouts/main', $data );
+		$this->load->model( 'auth_model' );
+		if ( $this->auth_model->user_logged_in() ) 
+		{
+			$id = $this->session->userdata( 'logininfo' );
+			$id = $id['id'];
+			$data['user_data'] = $this->auth_model->getuser_data( $id );			
+			$data['myaccount'] = 'myaccount_page';
+			$this->load->view( 'layouts/main', $data );			
+		}
+		else
+		{
+			redirect( 'home?Login First' );	
+		}
 	}
 
-	public function modifyaddress()
+	public function modifyaddress( $id = NULL )
 	{
-		$data['modifyaddress'] = 'modifyaddress_page.php';
-		$this->load->view( 'layouts/main', $data );
+		$this->load->model( 'auth_model' );
+		if ( $this->auth_model->user_logged_in() ) 
+		{
+
+			$id = $this->session->userdata( 'logininfo' );
+			$id = $id['id'];
+			$data['user_data'] = $this->auth_model->getuser_data( $id );	
+			$data['modifyaddress'] = 'modifyaddress_page';
+			$this->load->view( 'layouts/main', $data );
+
+		}
+		else
+		{
+			redirect( 'home?Login First' );	
+		}
 	}
 
-
+	public function modifyuser( $id = NULL )
+	{
+		$this->load->model( 'auth_model' );
+		$userdata = $this->auth_model->modifyuser( $id );
+		if ( $userdata ) 
+		{
+			$this->session->set_flashdata( 'success','Your information updated sucessfully' );
+			redirect( 'auth/myaccount' );
+		}
+		else
+		{
+			$this->session->set_flashdata( 'fail','Your information updated fail' );
+			redirect( 'auth/modifyaddress' );
+		}
+	}
 
 
 	public function check_session()

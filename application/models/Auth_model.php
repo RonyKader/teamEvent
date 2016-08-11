@@ -67,9 +67,60 @@
 			}
 		}
 
+		public function user_logged_in()
+		{
+			if ( $this->session->userdata( 'logininfo') != '' ) 
+			{
+				return true;
+			}			
+		}
 
 
+		public function getuser_data( $id = NULL )
+		{
+			$data = array(
+				'id' => $id
+				);
+			$query = $this->db->get_where( 'users',$data );
+
+			if ( $query->num_rows() == 1 ) 
+			{
+				return $query->result();
+			}
+			else
+			{
+				return FALSE;
+			}
+		}
 
 
+		public function modifyuser( $id = NULL )
+		{
+			$fname    = $this->input->post( 'fname' );
+			$lname    = $this->input->post( 'lname' );
+			$email    = $this->input->post( 'email' );
+			$mobile   = $this->input->post( 'mobile' );
+			$postcode = $this->input->post( 'postcode' );
+
+			$data = array(
+				 	'fname' => $fname,
+				 	'lname' => $lname,
+				 	'email' => $email,
+				 	'mobile' => $mobile,
+				 	'postcode' => $postcode
+				);
+
+			$data = $this->security->xss_clean( $data );
+			$this->db->where( 'id', $id );
+			$updateuser = $this->db->update( 'users', $data );
+			if ( $updateuser ) 
+			{
+				return TRUE;
+			}
+			else
+			{
+				return FALSE;
+			}
+		}
 
 	}
