@@ -98,10 +98,12 @@
 		</div>
 	</footer>
 	<!--  footer end   -->
-	
+	<script type='text/javascript' src="<?php echo base_url();?>/assets/js/jquery-1.10.2.min.js"></script>
+    <script type='text/javascript' src='<?php echo base_url();?>/assets/js/bootstrap.min.js'></script>
+    <script type="text/javascript" src="<?php echo base_url();?>/assets/js/bootstrap-datepicker.js"></script>
 	<script type='text/javascript' src='<?php echo base_url();?>/assets/js/plugins.js'></script>
 	<script type='text/javascript' src='<?php echo base_url();?>/assets/js/countdown.js'></script>
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script type="text/javascript" src="http://www.maps.google.com/maps/api/js?sensor=true"></script>
 	<script type='text/javascript' src='<?php echo base_url();?>/assets/js/gmaps.js'></script>
 	<script type='text/javascript' src='<?php echo base_url();?>/assets/js/modernizr.js'></script>
 	<script type='text/javascript' src='<?php echo base_url();?>/assets/js/functions.js'></script>
@@ -135,5 +137,12 @@
 
          countdown_init();
     </script>
+
+   <script type="text/javascript">
+	   	jQuery(document).ready(function(){
+	       $('#he').datepicker();
+	   	});
+   </script>
+
 </body>
 </html>

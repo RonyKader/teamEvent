@@ -91,8 +91,8 @@ class Auth extends CI_Controller
 				redirect( 'auth/myaccount' );
 			}else
 			{
-				$this->session->set_flashdata( 'errorinfo', 'Please Try with valid email and password' );
-				redirect(base_url());
+				$this->session->set_flashdata( 'loginfail', 'Please Try with valid email and password' );
+				redirect( 'auth/registration' );
 			}
 		}
 	}

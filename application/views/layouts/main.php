@@ -19,5 +19,8 @@
 <?php if ( isset( $modifyaddress )): ?>
     <?php $this->load->view( $modifyaddress ); ?>
 <?php endif ?>
+<?php if ( isset( $titckets_summary )): ?>
+    <?php $this->load->view( $titckets_summary ); ?>
+<?php endif ?>
 
 <?php $this->load->view( 'layouts/footer' ); ?>

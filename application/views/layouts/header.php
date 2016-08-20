@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Framework Styles -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/datepicker.css"/>
 
     <!-- Fonts Styles -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/font-awesome.min.css"/> 
@@ -29,7 +30,7 @@
     <!-- Project Styles -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css"> 
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/responsive.css"> 
-        <script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    
 </head>
 <body>
     <!--  preloader  -->
@@ -78,12 +79,12 @@
                                             <li><a href="homepage2.html">Homepage Two</a></li>
                                         </ul> -->
                                     </li>
-                                    <li class="active"><a href="<?php echo base_url();?>home/buytickets">Buy Tickets</a></li>
+                                    <li class="active"><a href="<?php echo base_url();?>home/buytickets">aBuy Tickets</a></li>
                                     <li class="dropdown menu-item menu-item-type-taxonomy menu-item-object-category aaamenu-item-has-children menu-item-376">
                                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us</a>
                                         <!-- <ul class="dropdown-menu sub-menu menu-sub-content">
                                             <li><a href="pricing-table.html">Pricing Table</a></li>
-                                            <li><a href="event-schedule.html">Event Schedule</a></li>
+                                            <li><a hrefa"event-schedule.html">Event Schedule</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                             <li><a href="error.html">404 page</a></li>
                                             <li><a href="faq.html">FAQ</a></li>

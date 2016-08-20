@@ -17,7 +17,14 @@
 					                              <li><a data-toggle="tab" href="#loginpage">Log in</a></li>
 					                            </ul>
 					                      </div>
-					                      <div class="modal-body">		                            
+					                      <div class="modal-body">	
+					                       <?php 
+					                       		$login_fail = $this->session->flashdata( 'loginfail' );
+					                       		if ( isset( $login_fail )) 
+					                       		{
+					                       			echo $login_fail;
+					                       		}
+					                        ?>	                            
 					                      <div class="alert-danger">
 					                          <?php echo validation_errors(); ?>
 					                      </div>
@@ -188,6 +195,8 @@
 				                                       ?>
 				                                    </div>
 
+				                                    
+
 					                                    <div class="form-group">
 					                                        <button type="sumbit" class="btn btn-primary btn-block custom-checkout">Log in with bollychicks</button>
 					                                    </div>
@@ -203,10 +212,8 @@
 					            </div>
 
 					            <!-- END OF CONTACT DETAILS SECTION -->
-
-					           
-					            </div>
-					            <!-- End of CFO order list -->          
+		
+					          
 				
 			</div><!-- /.row -->
 		</div><!-- /.container -->

@@ -1,5 +1,4 @@
-
-	<!-- start national-conference section  -->
+<!-- start national-conference section  -->
 	<section id="buytickets" class="national-conference">
 		<div class="container">
 			<div class="row">
@@ -28,7 +27,7 @@
 
 					                            <div class="tab-content">
 					                              <div id="signuppage" class="tab-pane fade">                
-					                                <form action="#" class="form-group">
+					                                <form action="<?php echo base_url();?>home/titckets_summary" class="form-group">
 				                                    <div class="form-group col-md-12">													
 														
 														<div class="book-wrapper clearfix col-lg-6 col-md-6">
@@ -225,10 +224,31 @@
 					                              </div>
 
 					                              <div id="loginpage" class="tab-pane fade in active">
-					                                <form action="#" class="form-group">
+													<?php 
+														$data = array(
+															'name' => 'individual',
+															'class' => 'form-group'
+															);
+														echo form_open('home/IndividualData', $data );
+
+													 ?>
+					                                <form action="<?php echo base_url();?>home/titckets_summary" class="form-group">
 					                                    <div class="form-group col-md-12">
 					                                      <label>Enter your chair number</label>
- 															<input type="text" class="form-control" name="qnty" id="qnty" onkeyup="populateForm()" onkeypress="return onlyNumbers(event);" value=""><br/>
+															<?php 
+																$data = array(
+																	'type' => 'text',
+																	'name' => 'qnty',
+																	'id'  => 'qnty',
+																	'class' => 'form-control',
+																	'onkeyup' => 'populateForm()',
+																	'onkeypress' => 'return onlyNumbers(event);'
+
+																	);
+																echo form_input( $data );
+
+															 ?>
+ 															<!-- <input type="text" class="form-control" name="qnty" id="qnty" onkeyup="populateForm()" onkeypress="return onlyNumbers(event);" value=""><br/> -->
 															<span id="fileInput"></span>												
 														<!-- Email -->
 
@@ -239,14 +259,14 @@
 					                                        <img src="img/chefonline-04.png" alt=""> -->
 					                                        <button type="sumbit" name="submit" class="btn btn-primary btn-block custom-checkout">Booking your chair</button>
 					                                    </div>
-					                                </form>
+					                                <?php echo form_close(); ?>
 					                                
 					                                <script type="text/javascript">
 
 					                                function onlyNumbers(e)
 					                                {
 
-					                                	if(e.charCode > 47 && e.charCode < 58)
+					                                	if(e.charCode > 49 && e.charCode < 58 )
 					                                	{
 					                                		return true;
 					                                	}
@@ -263,16 +283,16 @@
 					                                	for(x = 1; x <= qnty; x++)
 					                                	{
 					                                		myFormElements += '<div class="book-wrapper clearfix col-lg-6 col-md-6">';
-					                     					myFormElements += '<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12"><input type="text" class="form-control" name="fname" placeholder="Firstname"></div>';
+					                     					myFormElements += '<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12"><input type="text" class="form-control" name="fname[]" placeholder="Firstname"></div>';
 
-					                     					myFormElements += '<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12"><input type="text" class="form-control" name="lname" placeholder="Lastname"></div>';
+					                     					myFormElements += '<div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12"><input type="text" class="form-control" name="lname[]" placeholder="Lastname"></div>';
 
-					                     					myFormElements += '<div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12"><input type="text" class="form-control" name="mobile" placeholder="880"></div>';
+					                     					myFormElements += '<div class="form-group col-lg-3 col-md-3 col-sm-6 col-xs-12"><input type="text" class="form-control" name="mobile[]" placeholder="880"></div>';
 
-					                     					myFormElements += '<div class="form-group col-lg-9 col-md-9 col-sm-6 col-xs-12"><input type="text" class="form-control" name="mobile" placeholder="78087852"></div>';
+					                     					myFormElements += '<div class="form-group col-lg-9 col-md-9 col-sm-6 col-xs-12"><input type="text" class="form-control" name="mobile[]" placeholder="78087852"></div>';
 
 
-					                     					myFormElements += '<div class="form-group col-lg-12 col-md-12 col-sm-6 col-xs-12"><input type="date" class="form-control" name="date" placeholder="Date of birth"></div>';
+					                     					myFormElements += '<div class="form-group col-lg-12 col-md-12 col-sm-6 col-xs-12"><input type="date" class="form-control" name="date[]" placeholder="Date of birth"></div>';
 					                     					myFormElements += '</div>';
 					                     
 					                                	}
@@ -293,7 +313,23 @@
 					            </div>
 					            <!-- END OF CONTACT DETAILS SECTION -->
 					          </div>
-					         <!-- End of CFO order list -->      
+					         <!-- End of CFO order list -->    
+
+								<?php if ( isset( $_POST['subname'] ) ): ?>
+									<?php $numbers = $_POST['numbers'] ?>
+									<?php for ($i=0; $i < $numbers; $i++) { 
+									echo "Hello Bangladesh". $i."<br/>"; 
+										
+									} ?>
+
+								<?php endif ?>
+					         <div class="clearfix"></div>  
+					         <div class="col-lg-6 col-md-6">
+					         	<form action="" method="post">
+					         		<input type="text" name="numbers" id="numbers">
+					         		<input type="submit" value="submit" name="subname">
+					         	</form>
+					         </div>
 				
 			</div><!-- /.row -->
 		</div><!-- /.container -->
