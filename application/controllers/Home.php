@@ -38,4 +38,12 @@ class Home extends CI_Controller {
 	}
 
 
+
+	public function student_form()
+	{
+		$data['student_form'] = 'student_form';
+		$this->load->view( 'layouts/main',$data );
+	}
+
+
 }

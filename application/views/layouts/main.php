@@ -23,4 +23,8 @@
     <?php $this->load->view( $titckets_summary ); ?>
 <?php endif ?>
 
+<?php if ( isset( $student_form )): ?>
+    <?php $this->load->view( $student_form ); ?>
+<?php endif ?>
+
 <?php $this->load->view( 'layouts/footer' ); ?>
