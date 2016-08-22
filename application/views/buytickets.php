@@ -215,11 +215,10 @@
 
 				                                    </div>
 
-				                                    <div class="form-group">
-				                                      <!--   <input type="submit" class="btn btn-primary btn-block custom-checkout login-position" value="Log in with">
-				                                        <img src="img/chefonline-04.png" alt=""> -->
+				                                    <div class="form-group col-md-12">
 				                                        <button type="sumbit" name="submit" class="btn btn-primary btn-block custom-checkout">Booking your chair</button>
 				                                    </div>
+				                                    <div class="clearfix"></div>
 				                                </form>
 					                              </div>
 
@@ -254,11 +253,10 @@
 
 					                                    </div>
 
-					                                    <div class="form-group">
-					                                      <!--   <input type="submit" class="btn btn-primary btn-block custom-checkout login-position" value="Log in with">
-					                                        <img src="img/chefonline-04.png" alt=""> -->
+					                                    <div class="form-group col-md-12">
 					                                        <button type="sumbit" name="submit" class="btn btn-primary btn-block custom-checkout">Booking your chair</button>
 					                                    </div>
+					                                    <div class="clearfix"></div>
 					                                <?php echo form_close(); ?>
 					                                
 					                                <script type="text/javascript">

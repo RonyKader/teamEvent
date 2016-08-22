@@ -5531,3 +5531,36 @@ div#panel::-webkit-scrollbar {
 section.cfo-area.national-conference {
     background: #a7a7a7;
 }
+
+.titcket-one {
+    border: 1px solid #FF6F50;
+    padding: 19px;
+    color: #FF6F50;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 30px; 
+}
+.titcket-one i.fa.fa-user {
+    font-size: 88px;
+}
+.titcket-one .ticket-price {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #FF6F50;
+    color: #fff;
+    padding: 6px 19px;
+    font-size: 20px;
+}
+.total-ammount.text-right .btn {
+    background: #FF6F50;
+    border-color: #FF6F50;
+    width: 100%;
+    font-size: 21px;
+    margin-top: 23px;
+}
+.total-ammount.text-right ul li {
+    color: #FF6F50;
+    font-size: 29px;
+    margin-top: 21px;
+}
